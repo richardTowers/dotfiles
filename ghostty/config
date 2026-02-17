@@ -1,5 +1,10 @@
 # ─── Font ────────────────────────────────────────────────────────────
 font-family = FiraMonoNerdFontMono
 
+# ─── Window ──────────────────────────────────────────────────────────
+window-padding-x = 8
+window-padding-y = 4
+window-decoration = true
+
 # ─── Misc ────────────────────────────────────────────────────────────
 auto-update = check
