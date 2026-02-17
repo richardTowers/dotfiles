@@ -8,7 +8,6 @@ set timeoutlen=500
 " ─── Display ─────────────────────────────────────────────────────────
 syntax enable
 set number
-set cursorline
 set scrolloff=8
 set sidescrolloff=8
 set signcolumn=yes
