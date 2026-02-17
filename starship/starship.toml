@@ -1,0 +1,18 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$docker_context\
+$cmd_duration\
+$line_break\
+$character"""
+
+
+[cmd_duration]
+min_time = 2_000
+format = "[$duration]($style) "
+
