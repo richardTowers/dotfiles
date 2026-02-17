@@ -1,0 +1,6 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local overrides (these stay out of the repo)
+*.local
