@@ -34,7 +34,7 @@ else
 fi
 
 # ─── Completions ─────────────────────────────────────────────────────
-fpath+=($HOME/.zfunc)                                                            
+fpath=($HOME/.zfunc $fpath)
 autoload -Uz compinit && compinit -u
 zstyle ':completion:*' menu select
 
