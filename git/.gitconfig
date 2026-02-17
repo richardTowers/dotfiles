@@ -1,0 +1,30 @@
+[user]
+	name = Richard Towers
+	email = richard@richard-towers.com
+
+[core]
+	editor = vim
+	autocrlf = input
+	pager = less -FRX
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[diff]
+	colorMoved = default
+
+[merge]
+	conflictstyle = diff3
+
+[rerere]
+	enabled = true
+
+[alias]
+	graph = log --oneline --graph --decorate -20
+
