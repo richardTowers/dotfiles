@@ -18,8 +18,8 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-" Clear search highlight with Escape
-nnoremap <Esc> :nohlsearch<CR>
+" Clear search highlight with Enter
+nnoremap <CR> :nohlsearch<CR><CR>
 
 " ─── Indentation ─────────────────────────────────────────────────────
 set autoindent
