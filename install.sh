@@ -33,5 +33,10 @@ else
   link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
 fi
 
+if [ "$1" = "--patch-bash-for-idea" ]; then
+  info "Idea detected - overwriting bash to zsh."
+  echo 'if [ -t 1 ] && [ -x /usr/bin/zsh ] && [ "$ZSH_VERSION" = "" ]; then exec /usr/bin/zsh; fi' >> ~/.bashrc
+fi
+
 echo ""
 ok "All done!"
