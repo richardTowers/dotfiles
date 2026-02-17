@@ -10,8 +10,6 @@ syntax enable
 set number
 set scrolloff=8
 set sidescrolloff=8
-set signcolumn=yes
-set colorcolumn=100
 set showmatch
 set laststatus=2
 
