@@ -38,5 +38,16 @@ if [ "$1" = "--patch-bash-for-idea" ]; then
   echo 'if [ -t 1 ] && [ -x /usr/bin/zsh ] && [ "$ZSH_VERSION" = "" ]; then exec /usr/bin/zsh; fi' >> ~/.bashrc
 fi
 
+# --- JetBrains devcontainer XDG workaround for mise ---
+# https://youtrack.jetbrains.com/issue/RUBY-34350
+if [[ "$XDG_CONFIG_HOME" == /.jbdevcontainer/* ]]; then
+  info "JetBrains devcontainer XDG override detected — symlinking mise config..."
+  sudo mkdir -p "$XDG_CONFIG_HOME" "${XDG_DATA_HOME:-$XDG_CONFIG_HOME/../data}"
+  sudo chmod -R 777 /.jbdevcontainer
+  ln -sf "$HOME/.config/mise" "$XDG_CONFIG_HOME/mise"
+  ln -sf "$HOME/.local/share/mise" "${XDG_DATA_HOME:-$XDG_CONFIG_HOME/../data}/mise"
+  ok "mise symlinks created under /.jbdevcontainer"
+fi
+
 echo ""
 ok "All done!"
